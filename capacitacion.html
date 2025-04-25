@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <base target="_top">
+    <meta charset="UTF-8">
+    <title>Sistema de Capacitaciones</title>
+    <link href="https://fonts.googleapis.com/css2?family=Anaheim&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="capacitacion.css">
+</head>
+<body>
+    <div class="container">
+        <h1><i class="fas fa-graduation-cap"></i> Sistema de Capacitaciones</h1>
+        <div id="tableContainer"></div>
+    </div>
+
+    <!-- Modal de Capacitaciones -->
+    <div id="capacitacionesModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 id="modalTitle"><i class="fas fa-list-check"></i> <span></span></h2>
+            <div id="capacitacionesGrid" class="capacitaciones-grid"></div>
+        </div>
+    </div>
+
+    <!-- Modal del Diploma -->
+    <div id="diplomaModal" class="modal">
+        <div class="modal-content diploma-modal">
+            <span class="close">&times;</span>
+            <div id="diplomaContent"></div>
+        </div>
+    </div>
+
+    <script>
+        // Verificar sesión
+        const usuario = sessionStorage.getItem('usuario');
+        const rol = sessionStorage.getItem('rol');
+
+        if (!usuario || !rol) {
+            window.location.href = 'login.html';
+        }
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <script src="capacitacion.js"></script>
+</body>
+</html> 
