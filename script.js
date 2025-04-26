@@ -70,7 +70,7 @@ function loadDashboardData() {
 
     // Crear y añadir el script
     const script = document.createElement('script');
-    script.src = `https://script.google.com/macros/s/AKfycbxyelmWN4-BYIUqnq9c4g7gBCFZjSdbT3Z0mAGs0IU/dev?action=getData&callback=${callbackName}&rol=${rol}`;
+    script.src = `https://script.google.com/macros/s/AKfycbzrBHvgkzMDKqQozd1iYMMt-GlyDQazM9U6zV5R7mZ5yy85A_SL2quRP9S_nUy7snqK/exec?action=getData&callback=${callbackName}&rol=${rol}`;
     document.body.appendChild(script);
 }
 
